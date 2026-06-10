@@ -1,107 +1,86 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFdeTodos - Página Inicial</Inp></title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
 <body>
 
+    <!-- MENU -->
     <header>
-
         <div class="logo">
-            DFdeTodos   
+            <img src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+            <h2>DFdeTodos</h2>
         </div>
 
         <nav>
-            <a href="projetos.html">Projetos Sociais</a>
-            <a href="perfil-osc.html">Minha OSC</a>
-            <a href="sobre.html">Sobre Nós</a>
+            <a href="#">Projetos Sociais</a>
+            <a href="#">Minha OSC</a>
+            <a href="#">Sobre Nós</a>
         </nav>
+    </header>
 
-        <main>
+    <!-- BUSCA -->
+    <section class="busca">
+        <h1>O que você precisa?</h1>
 
-            <section class="busca-principal">
+        <div class="search-box">
+            <input
+                type="text"
+                placeholder="Digite o nome de uma instituição ou palavra-chave..."
+            >
+            <button>🔍</button>
+        </div>
+    </section>
 
-                <h1>O que você precisa?</h1>
+    <!-- MURAL -->
+    <section class="mural">
+        <h2>Mural Impactos</h2>
 
-                <input type="text" 
-                placeholder="Digite o nome de uma insituição ou palavra-chave">
+        <div class="cards">
 
-            </section>
+            <div class="card">
+                <img src="img/projeto1.jpg" alt="Projeto">
 
-            <section class="mural-impactos">
+                <h3>Nome Projeto</h3>
 
-                <h2>Mural Impactos</h2>
+                <p><strong>Local:</strong> Ceilândia</p>
 
-                <div class="cards">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
 
-                    <article class="card">
-
-                        <img src="img/projeto1.jpg" alt="Projeto">
-                    </article>
-                </div>
-
-            </section>
-            
-                    <h3>Nome Projeto</h3>
-
-                    <p><strong>Cidade:</strong> Lorem ipsum</p>
-
-                    <p><strong>Resumo:</strong></p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
-                    <button>Saiba Mais</button>
-
-                </article>
-
-                <article class="card">
-
-                    <img src="img/projeto2.jpg" alt="Projeto">
-
-                    <h3>Nome Projeto</h3>
-
-                    <p><strong>Cidade:</strong> Lorem ipsum</p>
-
-                    <p><strong>Resumo:</strong></p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
-                    <button>Saiba Mais</button>
-
-                </article>
-
-                <article class="card">
-
-                    <img src="img/projeto3.jpg" alt="Projeto">
-
-                    <h3>Nome Projeto</h3>
-
-                    <p><strong>Cidade:</strong> Lorem ipsum</p>
-
-                    <p><strong>Resumo:</strong></p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-
-                    <button>Saiba Mais</button>
-
-                </article>
-
+                <button>Saiba Mais</button>
             </div>
 
-        </section>
+            <div class="card">
+                <img src="img/projeto2.jpg" alt="Projeto">
 
-    </main>
+                <h3>Nome Projeto</h3>
+
+                <p><strong>Cidade:</strong> Brasília</p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+
+                <button>Saiba Mais</button>
+            </div>
+
+            <div class="card">
+                <img src="img/projeto3.jpg" alt="Projeto">
+
+                <h3>Nome Projeto</h3>
+
+                <p><strong>Cidade:</strong> Taguatinga</p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+
+                <button>Saiba Mais</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer></footer>
 
 </body>
-</html>
