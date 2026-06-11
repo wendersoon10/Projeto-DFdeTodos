@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+.logo-img {
+    height: 50px;
+    order: 1;
+}
+
+.titulo {
+    color: #2e7d32;
+    order: 2;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    order: 3;
+    margin-left: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2e7d32;
+}
+
+/* Cadastro */
+main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.cadastro-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+}
+
+.cadastro-box > h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h3 {
+    color: #2e7d32;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+.cadastro-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cadastro-box button:hover {
+    background-color: #1b5e20;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+        order: 1;
+    }
+
+    .titulo {
+        order: 2;
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo-img {
+        order: 3;
+    }
+
+    nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin: 15px 0 0;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+}

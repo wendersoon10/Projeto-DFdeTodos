@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+.logo-img {
+    height: 50px;
+    order: 1;
+}
+
+.titulo {
+    color: #2e7d32;
+    order: 2;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    order: 3;
+    margin-left: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2e7d32;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+/* Filtros */
+.filtros {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 25px 30px;
+}
+
+.filtros h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.busca {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.busca input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.busca input:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+.busca button {
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filtro-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.filtro-grid select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.filtro-grid select:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+.filtro-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.filtro-botoes button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filtro-botoes button:hover {
+    background-color: #1b5e20;
+}
+
+.filtro-botoes button.secundario {
+    background-color: #ffffff;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.filtro-botoes button.secundario:hover {
+    background-color: #f0f7f0;
+}
+
+/* Resultados */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+}
+
+.card-esq img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-esq h3 {
+    margin: 12px 0 8px;
+}
+
+.card-esq p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card-dir {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-dir p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-dir button {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-dir button:hover {
+    background-color: #1b5e20;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+    main {
+        padding: 25px 20px;
+    }
+
+    .filtro-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+        order: 1;
+    }
+
+    .titulo {
+        order: 2;
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo-img {
+        order: 3;
+    }
+
+    nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin: 15px 0 0;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    .filtro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+    }
+}

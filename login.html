@@ -1,91 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - DFdeTodos</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
 
     <header>
+        <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('aberto')">☰</button>
 
-        <img src="img/Logo DFdeTodos.png" alt="Logo DFdeTodos" width="40">
+        <h2 class="titulo">DFdeTodos</h2>
 
-        <strong>DFdeTodos</strong>
+        <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <a href="projetos.html">Projetos Sociais</a> |
-        <a href="perfil-pessoal-osc.html">Minha OSC</a> |
-        <a href="sobre.html">Sobre Nós</a>
-
-        <hr>
-
+        <nav>
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="perfil-pessoal-osc.html">Minha OSC</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
     </header>
 
     <main>
 
-        <section align="center">
+        <section class="login-box">
 
             <h2>Login</h2>
 
             <form>
 
-                <div>
-
-                    <label for="email">
-                        E-Mail:
-                    </label>
-
-                    <br>
-
+                <div class="campo">
+                    <label for="email">E-Mail:</label>
                     <input
                         type="email"
                         id="email"
                         name="email"
                         required
                     >
-
                 </div>
 
-                <br>
-
-                <div>
-
-                    <label for="senha">
-                        Senha:
-                    </label>
-
-                    <br>
-
+                <div class="campo">
+                    <label for="senha">Senha:</label>
                     <input
                         type="password"
                         id="senha"
                         name="senha"
                         required
                     >
-
                 </div>
 
-                <br><br>
+                <div class="botoes">
+                    <a href="home.html">
+                        <button type="button">Log In</button>
+                    </a>
 
-                <a href="home.html">
-
-                    <button type="button">
-                        Log In
-                    </button>
-
-                </a>
-
-                &nbsp;&nbsp;
-
-                <a href="cadastro.html">
-
-                    <button type="button">
-                        Cadastrar OSC
-                    </button>
-
-                </a>
+                    <a href="cadastro.html">
+                        <button type="button" class="secundario">Cadastrar OSC</button>
+                    </a>
+                </div>
 
             </form>
 
@@ -93,17 +68,10 @@
 
     </main>
 
-    <br><br><br>
-
     <footer>
-
-        <hr>
-
-        <p align="center">
-            DFdeTodos © 2026
-        </p>
-
+        <p>DFdeTodos © 2026</p>
     </footer>
 
 </body>
+
 </html>

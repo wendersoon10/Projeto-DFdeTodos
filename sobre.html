@@ -1,77 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - DFdeTodos</title>
+    <link rel="stylesheet" href="css/sobre.css">
 </head>
+
 <body>
 
     <header>
+        <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('aberto')">☰</button>
 
-        <img src="img/Logo DFdeTodos.png" alt="Logo DFdeTodos" width="40">
+        <h2 class="titulo">DFdeTodos</h2>
 
-        <strong>DFdeTodos</strong>
+        <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <a href="projetos.html">Projetos Sociais</a> |
-        <a href="perfil.html">Minha OSC</a> |
-        <a href="sobre.html">Sobre Nós</a>
-
-        <hr>
-
+        <nav>
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="perfil.html">Minha OSC</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
     </header>
 
-    <br>
+    <main>
 
-    <table width="90%" align="center">
+        <div class="folha">
 
-        <tr>
+            <div class="topo">
 
-            <td width="50%" valign="top">
+                <div class="texto">
+                    <h2>História / Propósito</h2>
+                    <p>
+                        O DFdeTodos foi criado com o propósito de ampliar a
+                        visibilidade dos projetos sociais do Distrito Federal,
+                        aproximando organizações, voluntários e apoiadores em
+                        uma única plataforma digital.
+                    </p>
 
-                <h2>HISTÓRIA / PROPÓSITO</h2>
+                    <h2>Como Funciona</h2>
+                    <p>
+                        As organizações sociais podem divulgar suas ações,
+                        necessidades e projetos. Os usuários podem pesquisar
+                        iniciativas e encontrar formas de colaborar ou participar
+                        das atividades desenvolvidas.
+                    </p>
+                </div>
 
-                <p>
-                    O DFdeTodos foi criado com o propósito de ampliar a
-                    visibilidade dos projetos sociais do Distrito Federal,
-                    aproximando organizações, voluntários e apoiadores em
-                    uma única plataforma digital.
-                </p>
+                <div class="imagem">
+                    <img src="img/sobre-nos.png" alt="Sobre Nós">
+                </div>
 
-                <br>
+            </div>
 
-                <h2>COMO FUNCIONA</h2>
-
-                <p>
-                    As organizações sociais podem divulgar suas ações,
-                    necessidades e projetos. Os usuários podem pesquisar
-                    iniciativas e encontrar formas de colaborar ou participar
-                    das atividades desenvolvidas.
-                </p>
-
-            </td>
-
-            <td width="50%" align="center">
-
-                <img
-                    src="img/sobre-nos.png"
-                    alt="Sobre Nós"
-                    width="400"
-                >
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td colspan="2">
-
-                <br>
-
-                <h2>QUEM SOMOS</h2>
-
+            <div class="quem-somos">
+                <h2>Quem Somos</h2>
                 <p>
                     Somos uma plataforma desenvolvida com o objetivo de
                     fortalecer o impacto social no Distrito Federal,
@@ -79,24 +63,16 @@
                     interessadas em contribuir para uma sociedade mais justa,
                     solidária e participativa.
                 </p>
+            </div>
 
-            </td>
+        </div>
 
-        </tr>
-
-    </table>
-
-    <br><br><br>
+    </main>
 
     <footer>
-
-        <hr>
-
-        <p align="center">
-            DFdeTodos © 2026
-        </p>
-
+        <p>DFdeTodos © 2026</p>
     </footer>
 
 </body>
+
 </html>

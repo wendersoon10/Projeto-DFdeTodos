@@ -1,52 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha OSC - DFdeTodos</title>
+    <link rel="stylesheet" href="css/cadastro-osc.css">
 </head>
+
 <body>
 
     <header>
+        <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('aberto')">☰</button>
 
-        <img src="img/Logo DFdeTodos.png" alt="Logo DFdeTodos" width="40">
+        <h2 class="titulo">DFdeTodos</h2>
 
-        <strong>DFdeTodos</strong>
+        <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <a href="projetos.html">Projetos Sociais</a> |
-        <a href="perfil.html">Minha OSC</a> |
-        <a href="sobre.html">Sobre Nós</a>
-
-        <hr>
-
+        <nav>
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="perfil.html">Minha OSC</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
     </header>
 
-    <br>
+    <main>
 
-    <form>
+        <form class="osc-box">
 
-        <!-- DADOS DE IDENTIFICAÇÃO -->
+            <h2>Minha OSC</h2>
 
-        <fieldset>
+            <section>
+                <h3>Dados de Identificação</h3>
 
-            <legend>
-                <h2>Dados de Identificação</h2>
-            </legend>
+                <div class="grid">
 
-            <table width="100%">
-
-                <tr>
-
-                    <td>
+                    <div class="campo">
                         <label>Nome da Instituição:</label>
-                        <br>
-                        <input type="text" size="50">
-                    </td>
+                        <input type="text">
+                    </div>
 
-                    <td>
+                    <div class="campo">
                         <label>Causas promovidas:</label>
-                        <br>
                         <select>
                             <option>Selecione</option>
                             <option>Educação</option>
@@ -54,130 +49,65 @@
                             <option>Esporte</option>
                             <option>Cultura</option>
                         </select>
-                    </td>
+                    </div>
 
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <br>
-                    </td>
-                </tr>
-
-                <tr>
-
-                    <td>
+                    <div class="campo">
                         <label>CEP:</label>
-                        <br>
                         <input type="text">
-                    </td>
+                    </div>
 
-                    <td>
+                    <div class="campo">
                         <label>Região Administrativa:</label>
-                        <br>
                         <select>
                             <option>Selecione</option>
                             <option>Brasília</option>
                             <option>Ceilândia</option>
                             <option>Taguatinga</option>
                         </select>
-                    </td>
+                    </div>
 
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <br>
-                    </td>
-                </tr>
-
-                <tr>
-
-                    <td>
+                    <div class="campo">
                         <label>Macroregião do DF:</label>
-                        <br>
                         <select>
                             <option>Selecione</option>
                         </select>
-                    </td>
+                    </div>
 
-                    <td>
+                    <div class="campo">
                         <label>WhatsApp / Telefone:</label>
-                        <br>
                         <input type="text" placeholder="(00) 0 0000-0000">
-                    </td>
+                    </div>
 
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <br>
-                    </td>
-                </tr>
-
-                <tr>
-
-                    <td colspan="2">
-
+                    <div class="campo full">
                         <label>Endereço Completo:</label>
-                        <br>
+                        <input type="text">
+                    </div>
 
-                        <input type="text" size="80">
+                </div>
+            </section>
 
-                    </td>
+            <section>
+                <h3>Informações Dinâmicas</h3>
 
-                </tr>
+                <div class="campo">
+                    <label>Resumo da Instituição:</label>
+                    <textarea rows="8"></textarea>
+                </div>
 
-            </table>
+                <div class="dinamicas">
 
-        </fieldset>
-
-        <br><br>
-
-        <!-- INFORMAÇÕES DINÂMICAS -->
-
-        <fieldset>
-
-            <legend>
-                <h2>Informações Dinâmicas</h2>
-            </legend>
-
-            <label>Resumo da Instituição:</label>
-
-            <br><br>
-
-            <textarea rows="10" cols="120"></textarea>
-
-            <br><br>
-
-            <table width="100%">
-
-                <tr>
-
-                    <!-- NECESSIDADES -->
-
-                    <td width="40%" valign="top">
-
-                        <h3>Lista de necessidades</h3>
-
+                    <div class="bloco">
+                        <h4>Lista de necessidades</h4>
                         <ul>
                             <li>Item Lorem ipsum dolor.</li>
                             <li>Item Lorem ipsum dolor.</li>
                             <li>Item Lorem ipsum dolor.</li>
                         </ul>
+                        <button type="button" class="secundario">Adicionar Item</button>
+                    </div>
 
-                        <button type="button">
-                            Adicionar Item
-                        </button>
-
-                    </td>
-
-                    <!-- IMAGENS -->
-
-                    <td width="60%" valign="top">
-
-                        <h3>Imagens de ações prestadas</h3>
-
+                    <div class="bloco">
+                        <h4>Imagens de ações prestadas</h4>
                         <ul>
                             <li>acao1.png</li>
                             <li>acao2.png</li>
@@ -185,40 +115,24 @@
                             <li>acao4.png</li>
                             <li>acao5.png</li>
                         </ul>
-
                         <input type="file" multiple>
+                    </div>
 
-                    </td>
+                </div>
+            </section>
 
-                </tr>
+            <div class="acoes">
+                <button type="submit">Salvar</button>
+            </div>
 
-            </table>
+        </form>
 
-        </fieldset>
-
-        <br>
-
-        <div align="right">
-
-            <button type="submit">
-                Salvar
-            </button>
-
-        </div>
-
-    </form>
-
-    <br><br>
+    </main>
 
     <footer>
-
-        <hr>
-
-        <p align="center">
-            DFdeTodos © 2026
-        </p>
-
+        <p>DFdeTodos © 2026</p>
     </footer>
 
 </body>
+
 </html>

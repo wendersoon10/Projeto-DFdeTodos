@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #2e7d32;
+}
+
+.logo-img {
+    height: 50px;
+    order: 1;
+}
+
+.titulo {
+    color: #2e7d32;
+    order: 2;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    order: 3;
+    margin-left: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2e7d32;
+}
+
+/* Folha única */
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.folha {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.folha h2 {
+    color: #2e7d32;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+.folha h2:first-child {
+    margin-top: 0;
+}
+
+.folha p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Topo: texto + imagem lado a lado */
+.topo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Quem somos */
+.quem-somos {
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 25px;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+    .topo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+        order: 1;
+    }
+
+    .titulo {
+        order: 2;
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo-img {
+        order: 3;
+    }
+
+    nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin: 15px 0 0;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    .folha {
+        padding: 25px 20px;
+    }
+}
