@@ -13,51 +13,6 @@ body {
     flex-direction: column;
 }
 
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #ffffff;
-    padding: 15px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: #2e7d32;
-}
-
-.logo-img {
-    height: 50px;
-    order: 1;
-}
-
-.titulo {
-    color: #2e7d32;
-    order: 2;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
-    order: 3;
-    margin-left: auto;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #2e7d32;
-}
 
 /* Box */
 main {

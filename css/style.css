@@ -1,0 +1,16 @@
+@import url(header.css);
+
+:root{
+    --cor-azul: #1A365D;
+    --cor-branco: #F5F5F3;
+    --cor-branco-escuro: #E2E8F0;
+    --font-poppins: "Poppins", sans-serif;
+
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
