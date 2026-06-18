@@ -1,0 +1,9 @@
+@import url(containerBusca.css);
+@import url(containerMural.css);
+
+hr {
+    margin: 0;
+    border: 1px solid var(--cor-preto);
+}
+
+
