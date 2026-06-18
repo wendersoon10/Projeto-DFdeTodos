@@ -4,113 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <title>DFdeTodos - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>DFdeTodos — Impacto social no Distrito Federal</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
     <header>
-        <input class="checkbox__menu-hamburguer" type="checkbox" id="menu-hamburguer">
-        <label class="icone__menu-hamburguer" for="menu-hamburguer"><img src="img/iconMenuBranco.png" alt="Menu"></label>
-        <ul class="lista-navegacao-mobile">
-            <li class="item__lista-navegacao-mobile"><a href="projetos.html" class="link__item__lista-navegacao-mobile">Projetos Sociais</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="cadastro-osc.html" class="link__item__lista-navegacao-mobile">Cadastrar Minha OSC</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="sobre.html" class="link__item__lista-navegacao-mobile">Sobre Nós</a></li>
-        </ul>
-
-        <a href="home.html" class="logo-header">
-            <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
-            <h2 class="logo-titulo">DFdeTodos</h2>
-        </a>
-
-        <nav class="navegação__header">
-            <a href="projetos.html" class="item-navegacao">Projetos Sociais</a>
-            <a href="cadastro-osc.html" class="item-navegacao">Cadastrar Minha OSC</a>
-            <a href="sobre.html" class="item-navegacao">Sobre Nós</a>
-        </nav>
+        <div class="container nav-inner">
+            <a href="home.html" class="brand">
+                <img class="brand-logo" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+                <span class="brand-name">DF<span>de</span>Todos</span>
+            </a>
+            <nav class="menu">
+                <a href="projetos.html">Projetos Sociais</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="login.html" class="btn-entrar">Entrar</a>
+                <a href="cadastro-osc.html"><button class="btn-cadastrar">Cadastrar OSC</button></a>
+            </nav>
+            <div class="menu-btn" onclick="document.querySelector('.mobile-menu').classList.toggle('aberto')">
+                <svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="2.2" rx="1.1" fill="#0B3D29"/><rect x="3" y="11" width="18" height="2.2" rx="1.1" fill="#0B3D29"/><rect x="3" y="16" width="18" height="2.2" rx="1.1" fill="#0B3D29"/></svg>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <div class="mobile-actions">
+                <a href="login.html" class="ghost">Entrar</a>
+                <a href="cadastro-osc.html" class="solid">Cadastrar OSC</a>
+            </div>
+        </div>
     </header>
 
-
-
     <main>
-        <section class="container-busca">
-           <h1>O que você precisa?</h1>
 
-            <div class="search-box">
-                <input
-                    type="text"
-                    placeholder="Digite o nome de uma instituição ou palavra-chave..."
-                >
-                <button>🔍</button>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <span class="hero-badge"><span class="d"></span>Impacto social no Distrito Federal</span>
+                    <h1>O que você<br>precisa hoje?</h1>
+                    <p>Conectamos pessoas às organizações e projetos sociais que transformam o DF. Encontre onde doar, ser voluntário ou pedir ajuda.</p>
+                    <div class="hero-search">
+                        <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#5E6E64" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#5E6E64" stroke-width="2" stroke-linecap="round"/></svg>
+                        <input placeholder="Nome de uma instituição ou palavra-chave...">
+                        <button>Buscar</button>
+                    </div>
+                    <div class="hero-chips">
+                        <span>Educação</span>
+                        <span>Meio Ambiente</span>
+                        <span>Saúde</span>
+                        <span>Causa Animal</span>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-photo">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=70" alt="Voluntários">
+                    </div>
+                    <div class="hero-float">
+                        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.4-7 10-7 10z" fill="#F2A93B"/></svg></span>
+                        <div>
+                            <div class="big">+8.700</div>
+                            <div class="small">pessoas impactadas</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <hr>
-
-        <section class="container-mural">
-
-             <h2>Mural Impactos</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <img src="img/Projeto1.png" alt="Projeto">
-
-                <h3>Nome Projeto</h3>
-
-                <p><strong>Local:</strong> Ceilândia</p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                </p>
-
-                <button>Saiba Mais</button>
+        <!-- Faixa de estatísticas -->
+        <section class="strip">
+            <div class="container strip-inner">
+                <div class="stat"><div class="num">+120</div><div class="label">OSCs cadastradas</div></div>
+                <div class="stat"><div class="num">3.4 mil</div><div class="label">voluntários ativos</div></div>
+                <div class="stat"><div class="num">33</div><div class="label">cidades / RAs</div></div>
+                <div class="stat"><div class="num">+8.7 mil</div><div class="label">pessoas impactadas</div></div>
             </div>
-
-            <div class="card">
-                <img src="img/Projeto2.png" alt="Projeto">
-
-                <h3>Nome Projeto</h3>
-
-                <p><strong>Cidade:</strong> Brasília</p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                </p>
-
-                <button>Saiba Mais</button>
-            </div>
-
-            <div class="card">
-                <img src="img/Projeto3.png" alt="Projeto">
-
-                <h3>Nome Projeto</h3>
-
-                <p><strong>Cidade:</strong> Taguatinga</p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit.
-                </p>
-
-                <button>Saiba Mais</button>
-            </div>
-
-        </div>
-
         </section>
+
+        <!-- Causas -->
+        <section class="container causes-section">
+            <h2 class="section-eyebrow">Explore por causa</h2>
+            <p class="causes-head">Escolha como você quer ajudar</p>
+            <div class="causes-grid">
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#2F6FB0"></span><div class="label">Educação</div><div class="count">2 projetos</div></a>
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#D9534F"></span><div class="label">Saúde</div><div class="count">1 projetos</div></a>
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#2E8B57"></span><div class="label">Meio Ambiente</div><div class="count">1 projetos</div></a>
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#E0843C"></span><div class="label">Assistência Social</div><div class="count">1 projetos</div></a>
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#D45D89"></span><div class="label">Cultura</div><div class="count">1 projetos</div></a>
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#B5793A"></span><div class="label">Causa Animal</div><div class="count">1 projetos</div></a>
+                <a href="projetos.html" class="cause-card"><span class="dot" style="background:#8E6DB0"></span><div class="label">Pessoa Idosa</div><div class="count">1 projetos</div></a>
+            </div>
+        </section>
+
+        <!-- Mural de impactos -->
+        <section class="container mural-section">
+            <div class="mural-head">
+                <div>
+                    <h2 class="section-eyebrow gold">Mural de impactos</h2>
+                    <p class="section-title">Projetos em destaque</p>
+                </div>
+                <a href="projetos.html" class="ver-todos">Ver todos
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><line x1="4" y1="12" x2="19" y2="12" stroke="#178A5A" stroke-width="2" stroke-linecap="round"/><polyline points="13,6 19,12 13,18" stroke="#178A5A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <div class="card-grid">
+
+                <a href="perfil-pessoal-osc.html" class="project-card">
+                    <div class="thumb">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=70" alt="Plantar o Amanhã">
+                        <span class="badge-causa" style="background:#2E8B57">Meio Ambiente</span>
+                    </div>
+                    <div class="body">
+                        <div class="title-row"><span class="nome">Plantar o Amanhã</span>
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="local-row"><span class="pin"></span><span>Brazlândia – DF</span></div>
+                        <p class="resumo">Reflorestamento do Cerrado e hortas comunitárias que envolvem moradores na produção de alimentos saudáveis.</p>
+                        <button class="btn-saiba">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="project-card">
+                    <div class="thumb">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=70" alt="Mãos que Educam">
+                        <span class="badge-causa" style="background:#2F6FB0">Educação</span>
+                    </div>
+                    <div class="body">
+                        <div class="title-row"><span class="nome">Mãos que Educam</span>
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="local-row"><span class="pin"></span><span>Ceilândia – DF</span></div>
+                        <p class="resumo">Reforço escolar gratuito e oficinas de leitura para crianças e adolescentes da Ceilândia no contraturno.</p>
+                        <button class="btn-saiba">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="project-card">
+                    <div class="thumb">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=70" alt="Prato Cheio DF">
+                        <span class="badge-causa" style="background:#E0843C">Assistência Social</span>
+                    </div>
+                    <div class="body">
+                        <div class="title-row"><span class="nome">Prato Cheio DF</span>
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="local-row"><span class="pin"></span><span>SCIA / Estrutural – DF</span></div>
+                        <p class="resumo">Cozinha solidária que prepara e distribui refeições para famílias em situação de insegurança alimentar.</p>
+                        <button class="btn-saiba">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="project-card">
+                    <div class="thumb">
+                        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=70" alt="Patas do Cerrado">
+                        <span class="badge-causa" style="background:#B5793A">Causa Animal</span>
+                    </div>
+                    <div class="body">
+                        <div class="title-row"><span class="nome">Patas do Cerrado</span></div>
+                        <div class="local-row"><span class="pin"></span><span>Planaltina – DF</span></div>
+                        <p class="resumo">Resgate, tratamento e adoção responsável de animais abandonados na região de Planaltina.</p>
+                        <button class="btn-saiba">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="project-card">
+                    <div class="thumb">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=70" alt="Vovó Feliz">
+                        <span class="badge-causa" style="background:#8E6DB0">Pessoa Idosa</span>
+                    </div>
+                    <div class="body">
+                        <div class="title-row"><span class="nome">Vovó Feliz</span>
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="local-row"><span class="pin"></span><span>Taguatinga – DF</span></div>
+                        <p class="resumo">Acolhimento e atividades de convivência para pessoas idosas em situação de vulnerabilidade e solidão.</p>
+                        <button class="btn-saiba">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="project-card">
+                    <div class="thumb">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=70" alt="Cores da Periferia">
+                        <span class="badge-causa" style="background:#D45D89">Cultura</span>
+                    </div>
+                    <div class="body">
+                        <div class="title-row"><span class="nome">Cores da Periferia</span></div>
+                        <div class="local-row"><span class="pin"></span><span>Samambaia – DF</span></div>
+                        <p class="resumo">Oficinas gratuitas de música, dança e artes visuais para jovens da periferia de Samambaia.</p>
+                        <button class="btn-saiba">Saiba Mais</button>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- CTA OSC -->
+        <section class="container cta-section">
+            <div class="cta">
+                <div class="cta-blob"></div>
+                <div class="cta-text">
+                    <h3>Sua OSC ainda não está aqui?</h3>
+                    <p>Cadastre sua organização gratuitamente, mostre suas ações e receba voluntários e doações de toda a região.</p>
+                </div>
+                <a href="cadastro-osc.html"><button class="cta-btn">Cadastrar minha OSC</button></a>
+            </div>
+        </section>
+
     </main>
 
-    <hr>
-
-    <footer></footer>
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="row">
+                        <img class="footer-logo" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+                        <span class="name">DFdeTodos</span>
+                    </div>
+                    <p>Conectando o Distrito Federal a quem transforma vidas, uma causa de cada vez.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegar</h4>
+                    <a href="home.html">Início</a>
+                    <a href="projetos.html">Projetos Sociais</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Para OSCs</h4>
+                    <a href="cadastro-osc.html">Cadastrar OSC</a>
+                    <a href="login.html">Entrar</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 DFdeTodos · Impacto social no Distrito Federal</div>
+        </div>
+    </footer>
 
 </body>
 

@@ -4,36 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <title>DFdeTodos - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastramento - DFdeTodos</title>
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 
 <body>
 
     <header>
-        <input class="checkbox__menu-hamburguer" type="checkbox" id="menu-hamburguer">
-        <label class="icone__menu-hamburguer" for="menu-hamburguer"><img src="img/iconMenuBranco.png" alt="Menu"></label>
-        <ul class="lista-navegacao-mobile">
-            <li class="item__lista-navegacao-mobile"><a href="projetos.html" class="link__item__lista-navegacao-mobile">Projetos Sociais</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="cadastro-osc.html" class="link__item__lista-navegacao-mobile">Cadastrar Minha OSC</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="sobre.html" class="link__item__lista-navegacao-mobile">Sobre Nós</a></li>
-        </ul>
+        <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('aberto')">☰</button>
 
-        <a href="home.html" class="logo-header">
-            <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
-            <h2 class="logo-titulo">DFdeTodos</h2>
-        </a>
+        <h2 class="titulo">DFdeTodos</h2>
 
-        <nav class="navegação__header">
-            <a href="projetos.html" class="item-navegacao">Projetos Sociais</a>
-            <a href="cadastro-osc.html" class="item-navegacao">Cadastrar Minha OSC</a>
-            <a href="sobre.html" class="item-navegacao">Sobre Nós</a>
+        <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+
+        <nav>
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="perfil-osc.html">Minha OSC</a>
+            <a href="sobre.html">Sobre Nós</a>
         </nav>
     </header>
+
     <main>
 
         <form class="cadastro-box">

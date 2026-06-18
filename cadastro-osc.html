@@ -4,144 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <title>DFdeTodos - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastrar OSC — DFdeTodos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/auth.css">
 </head>
 
 <body>
 
     <header>
-        <input class="checkbox__menu-hamburguer" type="checkbox" id="menu-hamburguer">
-        <label class="icone__menu-hamburguer" for="menu-hamburguer"><img src="img/iconMenuBranco.png" alt="Menu"></label>
-        <ul class="lista-navegacao-mobile">
-            <li class="item__lista-navegacao-mobile"><a href="projetos.html" class="link__item__lista-navegacao-mobile">Projetos Sociais</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="cadastro-osc.html" class="link__item__lista-navegacao-mobile">Cadastrar Minha OSC</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="sobre.html" class="link__item__lista-navegacao-mobile">Sobre Nós</a></li>
-        </ul>
-
-        <a href="home.html" class="logo-header">
-            <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
-            <h2 class="logo-titulo">DFdeTodos</h2>
-        </a>
-
-        <nav class="navegação__header">
-            <a href="projetos.html" class="item-navegacao">Projetos Sociais</a>
-            <a href="cadastro-osc.html" class="item-navegacao">Cadastrar Minha OSC</a>
-            <a href="sobre.html" class="item-navegacao">Sobre Nós</a>
-        </nav>
+        <div class="container nav-inner">
+            <a href="home.html" class="brand">
+                <img class="brand-logo" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+                <span class="brand-name">DF<span>de</span>Todos</span>
+            </a>
+            <nav class="menu">
+                <a href="projetos.html">Projetos Sociais</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="login.html" class="btn-entrar">Entrar</a>
+                <a href="cadastro-osc.html"><button class="btn-cadastrar">Cadastrar OSC</button></a>
+            </nav>
+            <div class="menu-btn" onclick="document.querySelector('.mobile-menu').classList.toggle('aberto')">
+                <svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="2.2" rx="1.1" fill="#0B3D29"/><rect x="3" y="11" width="18" height="2.2" rx="1.1" fill="#0B3D29"/><rect x="3" y="16" width="18" height="2.2" rx="1.1" fill="#0B3D29"/></svg>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <div class="mobile-actions">
+                <a href="login.html" class="ghost">Entrar</a>
+                <a href="cadastro-osc.html" class="solid">Cadastrar OSC</a>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main class="auth-stage">
 
-        <form class="osc-box">
-
-            <h2>Minha OSC</h2>
-
-            <section>
-                <h3>Dados de Identificação</h3>
-
-                <div class="grid">
-
-                    <div class="campo">
-                        <label>Nome da Instituição:</label>
-                        <input type="text">
+        <div class="auth-card wide">
+            <h1>Cadastre sua OSC</h1>
+            <p class="auth-sub">Gratuito e leva poucos minutos</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Nome da organização</label>
+                        <input placeholder="Ex.: Plantar o Amanhã">
                     </div>
-
-                    <div class="campo">
-                        <label>Causas promovidas:</label>
-                        <select>
-                            <option>Selecione</option>
-                            <option>Educação</option>
-                            <option>Saúde</option>
-                            <option>Esporte</option>
-                            <option>Cultura</option>
-                        </select>
+                    <div class="form-col small">
+                        <label>CNPJ</label>
+                        <input placeholder="00.000.000/0001-00">
                     </div>
-
-                    <div class="campo">
-                        <label>CEP:</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="campo">
-                        <label>Região Administrativa:</label>
-                        <select>
-                            <option>Selecione</option>
-                            <option>Brasília</option>
-                            <option>Ceilândia</option>
-                            <option>Taguatinga</option>
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <label>Macroregião do DF:</label>
-                        <select>
-                            <option>Selecione</option>
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <label>WhatsApp / Telefone:</label>
-                        <input type="text" placeholder="(00) 0 0000-0000">
-                    </div>
-
-                    <div class="campo full">
-                        <label>Endereço Completo:</label>
-                        <input type="text">
-                    </div>
-
-                </div>
-            </section>
-
-            <section>
-                <h3>Informações Dinâmicas</h3>
-
-                <div class="campo">
-                    <label>Resumo da Instituição:</label>
-                    <textarea rows="8"></textarea>
                 </div>
 
-                <div class="dinamicas">
-
-                    <div class="bloco">
-                        <h4>Lista de necessidades</h4>
-                        <ul>
-                            <li>Item Lorem ipsum dolor.</li>
-                            <li>Item Lorem ipsum dolor.</li>
-                            <li>Item Lorem ipsum dolor.</li>
-                        </ul>
-                        <button type="button" class="secundario">Adicionar Item</button>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Causa principal</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option>Educação</option><option>Saúde</option><option>Meio Ambiente</option><option>Assistência Social</option><option>Cultura</option><option>Causa Animal</option><option>Pessoa Idosa</option>
+                            </select>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6,9 12,15 18,9" stroke="#178A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
                     </div>
-
-                    <div class="bloco">
-                        <h4>Imagens de ações prestadas</h4>
-                        <ul>
-                            <li>acao1.png</li>
-                            <li>acao2.png</li>
-                            <li>acao3.png</li>
-                            <li>acao4.png</li>
-                            <li>acao5.png</li>
-                        </ul>
-                        <input type="file" multiple>
+                    <div class="form-col small">
+                        <label>Cidade / RA</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option>Brasília</option><option>Ceilândia</option><option>Taguatinga</option><option>Samambaia</option><option>Planaltina</option><option>Gama</option><option>Sobradinho</option><option>Brazlândia</option><option>Estrutural</option><option>Sol Nascente</option>
+                            </select>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6,9 12,15 18,9" stroke="#178A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
                     </div>
-
                 </div>
-            </section>
 
-            <div class="acoes">
-                <button type="submit">Salvar</button>
-            </div>
+                <label>E-mail de contato</label>
+                <input type="email" placeholder="contato@suaong.org">
 
-        </form>
+                <label>Breve descrição</label>
+                <textarea rows="3" placeholder="Conte em poucas linhas o que sua organização faz..."></textarea>
+
+                <button type="submit" class="auth-btn">Criar conta gratuita</button>
+            </form>
+            <div class="auth-foot">Já tem conta? <a href="login.html">Entrar</a></div>
+        </div>
 
     </main>
 
     <footer>
-        <p>DFdeTodos © 2026</p>
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="row">
+                        <img class="footer-logo" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+                        <span class="name">DFdeTodos</span>
+                    </div>
+                    <p>Conectando o Distrito Federal a quem transforma vidas, uma causa de cada vez.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegar</h4>
+                    <a href="home.html">Início</a>
+                    <a href="projetos.html">Projetos Sociais</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Para OSCs</h4>
+                    <a href="cadastro-osc.html">Cadastrar OSC</a>
+                    <a href="login.html">Entrar</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 DFdeTodos · Impacto social no Distrito Federal</div>
+        </div>
     </footer>
 
 </body>

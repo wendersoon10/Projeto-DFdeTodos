@@ -4,139 +4,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <title>DFdeTodos - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Projetos Sociais — DFdeTodos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/projetos.css">
 </head>
 
 <body>
 
     <header>
-        <input class="checkbox__menu-hamburguer" type="checkbox" id="menu-hamburguer">
-        <label class="icone__menu-hamburguer" for="menu-hamburguer"><img src="img/iconMenuBranco.png" alt="Menu"></label>
-        <ul class="lista-navegacao-mobile">
-            <li class="item__lista-navegacao-mobile"><a href="projetos.html" class="link__item__lista-navegacao-mobile">Projetos Sociais</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="cadastro-osc.html" class="link__item__lista-navegacao-mobile">Cadastrar Minha OSC</a></li>
-            <li class="item__lista-navegacao-mobile"><a href="sobre.html" class="link__item__lista-navegacao-mobile">Sobre Nós</a></li>
-        </ul>
-
-        <a href="home.html" class="logo-header">
-            <img class="logo-img" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
-            <h2 class="logo-titulo">DFdeTodos</h2>
-        </a>
-
-        <nav class="navegação__header">
-            <a href="projetos.html" class="item-navegacao">Projetos Sociais</a>
-            <a href="cadastro-osc.html" class="item-navegacao">Cadastrar Minha OSC</a>
-            <a href="sobre.html" class="item-navegacao">Sobre Nós</a>
-        </nav>
+        <div class="container nav-inner">
+            <a href="home.html" class="brand">
+                <img class="brand-logo" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+                <span class="brand-name">DF<span>de</span>Todos</span>
+            </a>
+            <nav class="menu">
+                <a href="projetos.html">Projetos Sociais</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="login.html" class="btn-entrar">Entrar</a>
+                <a href="cadastro-osc.html"><button class="btn-cadastrar">Cadastrar OSC</button></a>
+            </nav>
+            <div class="menu-btn" onclick="document.querySelector('.mobile-menu').classList.toggle('aberto')">
+                <svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="2.2" rx="1.1" fill="#0B3D29"/><rect x="3" y="11" width="18" height="2.2" rx="1.1" fill="#0B3D29"/><rect x="3" y="16" width="18" height="2.2" rx="1.1" fill="#0B3D29"/></svg>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="projetos.html">Projetos Sociais</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <div class="mobile-actions">
+                <a href="login.html" class="ghost">Entrar</a>
+                <a href="cadastro-osc.html" class="solid">Cadastrar OSC</a>
+            </div>
+        </div>
     </header>
 
     <main>
 
-        <section class="filtros">
+        <!-- Busca + filtros -->
+        <section class="filtros-hero">
+            <div class="container filtros-inner">
+                <h1>Encontre projetos sociais</h1>
+                <p>Filtre por causa, tipo de apoio e região do DF.</p>
 
-            <h2>Seção de busca / Filtro</h2>
-
-            <form>
-                <div class="busca">
-                    <input type="text" placeholder="Digite o nome de uma instituição ou palavra-chave...">
-                    <button type="submit">🔍</button>
+                <div class="filtros-search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#5E6E64" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#5E6E64" stroke-width="2" stroke-linecap="round"/></svg>
+                    <input placeholder="Digite o nome de uma instituição ou palavra-chave...">
                 </div>
 
-                <div class="filtro-grid">
-                    <select>
-                        <option>Selecionar Causa</option>
-                    </select>
-
-                    <select>
-                        <option>Selecionar Tipo de Apoio</option>
-                    </select>
-
-                    <select>
-                        <option>Selecionar Macroregião</option>
-                    </select>
-
-                    <select>
-                        <option>Selecionar Cidade/RA</option>
-                    </select>
+                <div class="filtros-row">
+                    <div class="filtro">
+                        <label>Causa</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option>Todas</option><option>Educação</option><option>Saúde</option><option>Meio Ambiente</option><option>Assistência Social</option><option>Cultura</option><option>Causa Animal</option><option>Pessoa Idosa</option>
+                            </select>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6,9 12,15 18,9" stroke="#178A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                    <div class="filtro">
+                        <label>Tipo de Apoio</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option>Todos</option><option>Voluntariado</option><option>Doação financeira</option><option>Doação de itens</option><option>Adoção</option>
+                            </select>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6,9 12,15 18,9" stroke="#178A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                    <div class="filtro">
+                        <label>Macrorregião</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option>Todas</option><option>Norte</option><option>Sul</option><option>Leste</option><option>Oeste</option><option>Sudoeste</option><option>Central</option>
+                            </select>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6,9 12,15 18,9" stroke="#178A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                    <div class="filtro">
+                        <label>Cidade / RA</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option>Todas</option><option>Brasília</option><option>Ceilândia</option><option>Taguatinga</option><option>Samambaia</option><option>Planaltina</option><option>Gama</option><option>Sobradinho</option><option>Brazlândia</option><option>Estrutural</option><option>Sol Nascente</option>
+                            </select>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6,9 12,15 18,9" stroke="#178A5A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                    <button class="btn-limpar">Limpar filtro</button>
                 </div>
-
-                <div class="filtro-botoes">
-                    <button type="submit">Filtrar</button>
-                    <button type="reset" class="secundario">Limpar Filtro</button>
-                </div>
-            </form>
-
+            </div>
         </section>
 
-        <section class="resultados">
+        <!-- Resultados -->
+        <section class="container resultados">
+            <p class="result-count"><b>8</b> projetos encontrados</p>
 
-            <div class="cards">
+            <div class="lista">
 
-                <div class="card">
-                    <div class="card-esq">
-                        <img src="img/Projeto1.png" alt="Projeto">
-                        <h3>Nome Projeto</h3>
-                        <p><strong>Cidade:</strong> Brasília</p>
-                        <p><strong>Tipo de Ação:</strong> Educação</p>
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=70" alt="Plantar o Amanhã">
+                        <span class="badge-causa" style="background:#2E8B57">Meio Ambiente</span>
                     </div>
-                    <div class="card-dir">
-                        <p><strong>Resumo:</strong> O Projeto Social de Jiu-Jitsu promove disciplina, respeito e autoconfiança por meio da prática esportiva, fortalecendo o caráter e incentivando a superação de desafios dentro e fora do tatame.</p>
-                        <button>Saiba Mais</button>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Plantar o Amanhã</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Brazlândia</span><span><b>Apoio:</b> Voluntariado · Doação de itens</span></div>
+                        <p>Reflorestamento do Cerrado e hortas comunitárias que envolvem moradores na produção de alimentos saudáveis.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-esq">
-                        <img src="img/Projeto2.png" alt="Projeto">
-                        <h3>Nome Projeto</h3>
-                        <p><strong>Cidade:</strong> Ceilândia</p>
-                        <p><strong>Tipo de Ação:</strong> Saúde</p>
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=70" alt="Mãos que Educam">
+                        <span class="badge-causa" style="background:#2F6FB0">Educação</span>
                     </div>
-                    <div class="card-dir">
-                        <p><strong>Resumo:</strong> O Projeto Social de Futebol utiliza o esporte como ferramenta de inclusão, estimulando o trabalho em equipe, a amizade e a determinação para a formação de jovens mais preparados para a vida.</p>
-                        <button>Saiba Mais</button>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Mãos que Educam</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Ceilândia</span><span><b>Apoio:</b> Voluntariado · Doação financeira</span></div>
+                        <p>Reforço escolar gratuito e oficinas de leitura para crianças e adolescentes da Ceilândia no contraturno.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-esq">
-                        <img src="img/Projeto3.png" alt="Projeto">
-                        <h3>Nome Projeto</h3>
-                        <p><strong>Cidade:</strong> Taguatinga</p>
-                        <p><strong>Tipo de Ação:</strong> Esporte</p>
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=70" alt="Prato Cheio DF">
+                        <span class="badge-causa" style="background:#E0843C">Assistência Social</span>
                     </div>
-                    <div class="card-dir">
-                        <p><strong>Resumo:</strong> O Projeto Social de Dança incentiva a expressão artística, a criatividade e a autoestima por meio da música e do movimento, num ambiente acolhedor onde cada participante pode se expressar livremente.</p>
-                        <button>Saiba Mais</button>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Prato Cheio DF</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Estrutural</span><span><b>Apoio:</b> Doação de itens · Voluntariado</span></div>
+                        <p>Cozinha solidária que prepara e distribui refeições para famílias em situação de insegurança alimentar.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card-esq">
-                        <img src="img/Projeto4.png" alt="Projeto">
-                        <h3>Nome Projeto</h3>
-                        <p><strong>Cidade:</strong> Brasília</p>
-                        <p><strong>Tipo de Ação:</strong> Cultura</p>
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=70" alt="Patas do Cerrado">
+                        <span class="badge-causa" style="background:#B5793A">Causa Animal</span>
                     </div>
-                    <div class="card-dir">
-                        <p><strong>Resumo:</strong> O Projeto Social de Informática oferece acesso ao conhecimento tecnológico e ao desenvolvimento de habilidades digitais, ampliando oportunidades educacionais e profissionais num mundo cada vez mais conectado.</p>
-                        <button>Saiba Mais</button>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Patas do Cerrado</span></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Planaltina</span><span><b>Apoio:</b> Doação financeira · Adoção</span></div>
+                        <p>Resgate, tratamento e adoção responsável de animais abandonados na região de Planaltina.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
                     </div>
-                </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=70" alt="Vovó Feliz">
+                        <span class="badge-causa" style="background:#8E6DB0">Pessoa Idosa</span>
+                    </div>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Vovó Feliz</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Taguatinga</span><span><b>Apoio:</b> Voluntariado</span></div>
+                        <p>Acolhimento e atividades de convivência para pessoas idosas em situação de vulnerabilidade e solidão.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=70" alt="Cores da Periferia">
+                        <span class="badge-causa" style="background:#D45D89">Cultura</span>
+                    </div>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Cores da Periferia</span></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Samambaia</span><span><b>Apoio:</b> Voluntariado · Doação de itens</span></div>
+                        <p>Oficinas gratuitas de música, dança e artes visuais para jovens da periferia de Samambaia.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=70" alt="Saúde na Quebrada">
+                        <span class="badge-causa" style="background:#D9534F">Saúde</span>
+                    </div>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Saúde na Quebrada</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#178A5A"/><polyline points="8,12.5 11,15.5 16.5,9" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Sol Nascente</span><span><b>Apoio:</b> Voluntariado · Doação financeira</span></div>
+                        <p>Mutirões de atendimento, prevenção e orientação em saúde para comunidades com pouco acesso a serviços.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
+                    </div>
+                </a>
+
+                <a href="perfil-pessoal-osc.html" class="card-h">
+                    <div class="card-h-img" style="background:#DCEFE3">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=70" alt="Leitura Viva">
+                        <span class="badge-causa" style="background:#2F6FB0">Educação</span>
+                    </div>
+                    <div class="card-h-body">
+                        <div class="card-h-top">
+                            <div class="card-h-name"><span>Leitura Viva</span></div>
+                        </div>
+                        <div class="card-h-meta"><span><b>Cidade:</b> Gama</span><span><b>Apoio:</b> Doação de itens · Voluntariado</span></div>
+                        <p>Bibliotecas comunitárias e mediação de leitura em praças e escolas do Gama.</p>
+                        <button class="btn-saiba-solid">Saiba Mais</button>
+                    </div>
+                </a>
 
             </div>
-
         </section>
 
     </main>
 
     <footer>
-        <p>DFdeTodos © 2026</p>
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="row">
+                        <img class="footer-logo" src="img/Logo DFdeTodos.png" alt="DFdeTodos">
+                        <span class="name">DFdeTodos</span>
+                    </div>
+                    <p>Conectando o Distrito Federal a quem transforma vidas, uma causa de cada vez.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegar</h4>
+                    <a href="home.html">Início</a>
+                    <a href="projetos.html">Projetos Sociais</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Para OSCs</h4>
+                    <a href="cadastro-osc.html">Cadastrar OSC</a>
+                    <a href="login.html">Entrar</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 DFdeTodos · Impacto social no Distrito Federal</div>
+        </div>
     </footer>
 
 </body>

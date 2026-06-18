@@ -1,206 +1,287 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===== Galeria ===== */
+.galeria {
+    background: #0B3D29;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3px;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.g-item {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #0F5C3C;
 }
 
-/* Folha única */
-main {
-    flex: 1;
-    padding: 40px 20px;
+.g-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.folha {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 40px;
+/* ===== Cabeçalho do perfil ===== */
+.perfil-top {
+    padding-top: 30px;
+    padding-bottom: 18px;
 }
 
-.folha h3 {
-    color: #2e7d32;
-    margin: 25px 0 12px;
-}
-
-.folha p {
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
-.folha hr {
-    border: none;
-    border-top: 1px solid #e0e0e0;
-    margin: 25px 0;
-}
-
-.titulo {
-    text-align: center;
-    color: #2e7d32;
+.voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #5E6E64;
+    cursor: pointer;
     margin-bottom: 20px;
 }
 
-/* Galeria de ações */
-.galeria {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.galeria img {
-    flex: 1;
-    min-width: 200px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-/* Cabeçalho do perfil */
 .perfil-head {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
+    gap: 18px;
+    justify-content: space-between;
+}
+
+.perfil-id {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .avatar {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #2e7d32;
-}
-
-.perfil-head h2 {
-    color: #333;
-}
-
-.redes {
-    display: flex;
-    gap: 12px;
-    margin-left: auto;
-}
-
-.redes img {
-    width: 26px;
-    height: 26px;
-}
-
-/* Duas colunas */
-.duas-colunas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 10px;
-}
-
-.caixa-necessidades {
+    width: 66px;
+    height: 66px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    min-height: 200px;
-    color: #555;
-    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Depoimentos */
-.depoimentos {
+.nome-row {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    flex: 1;
-    min-width: 220px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 18px;
-}
-
-.card-topo {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    gap: 9px;
 }
 
-.card-topo h4 {
-    color: #2e7d32;
+.nome-row h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0B3D29;
+    margin: 0;
+    letter-spacing: -0.6px;
 }
 
-.estrelas {
-    color: #f5b301;
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.meta-row .badge-causa {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+.meta-row .local {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    color: #5E6E64;
+    font-weight: 500;
+}
+
+.meta-row .pin {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #F2A93B;
+}
+
+.btn-editar {
+    background: #fff;
+    color: #0F5C3C;
+    border: 1.5px solid #178A5A;
+    border-radius: 12px;
+    padding: 13px 26px;
+    font-size: 14.5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background: #EAF6EF;
+}
+
+/* ===== Corpo ===== */
+.perfil-body {
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.col-main {
+    flex: 2 1 420px;
+    min-width: 280px;
+}
+
+.col-main .section-eyebrow {
+    margin: 8px 0 12px;
+}
+
+.col-main .section-eyebrow.gold {
+    margin: 0 0 16px;
+}
+
+.proposito {
     font-size: 16px;
+    line-height: 1.75;
+    color: #3a473f;
+    margin: 0 0 34px;
+    font-weight: 300;
 }
 
-/* Footer */
-footer {
-    background-color: #2e7d32;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-    header {
-        padding: 15px 20px;
-        flex-wrap: wrap;
-    }
+.acao {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #fff;
+    border: 1px solid #EAEDE8;
+    border-radius: 14px;
+    padding: 15px 18px;
+}
 
-    .menu-btn {
-        display: block;
-        order: 1;
-    }
+.acao .check {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: #EAF6EF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
-    .titulo {
-        order: 2;
-        flex: 1;
-        text-align: center;
-    }
+.acao span:last-child {
+    font-size: 15px;
+    font-weight: 500;
+    color: #18231D;
+}
 
-    .logo-img {
-        order: 3;
-    }
+/* ===== Sidebar Como ajudar ===== */
+.col-side {
+    flex: 1 1 300px;
+    min-width: 260px;
+}
 
-    nav {
-        display: none;
-        order: 4;
-        width: 100%;
-        flex-direction: column;
-        gap: 12px;
-        margin: 15px 0 0;
-    }
+.ajudar {
+    background: linear-gradient(165deg, #0F5C3C, #178A5A);
+    border-radius: 22px;
+    padding: 28px 26px;
+    position: sticky;
+    top: 96px;
+    box-shadow: 0 18px 40px rgba(15, 92, 60, 0.2);
+}
 
-    nav.aberto {
-        display: flex;
-    }
+.ajudar h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px;
+}
 
-    .folha {
-        padding: 25px 20px;
-    }
+.ajudar .sub {
+    font-size: 13.5px;
+    color: #BFE0CD;
+    margin: 0 0 20px;
+    font-weight: 300;
+}
 
-    /* Nosso Propósito aparece antes de Como Ajudar no mobile */
-    .duas-colunas {
-        grid-template-columns: 1fr;
-    }
+.necessidades {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-bottom: 24px;
+}
 
-    .coluna:nth-child(2) {
-        order: -1;
-    }
+.nec {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 13px 15px;
+}
+
+.nec .d {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #F2A93B;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.nec span:last-child {
+    font-size: 14px;
+    color: #EAF6EF;
+    line-height: 1.4;
+}
+
+.btn-vol {
+    width: 100%;
+    background: #F2A93B;
+    color: #3A2606;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-vol:hover {
+    background: #fff;
+}
+
+.btn-doar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-doar:hover {
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.contato {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 13px;
+    color: #BFE0CD;
 }
